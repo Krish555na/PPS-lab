@@ -1,0 +1,33 @@
+//file 1
+import fibonacci_module
+
+def main():
+    # Accept an integer input from the user
+    max_value = int(input("Enter the max value: "))
+    
+    if max_value > 0:
+        # Generate Fibonacci sequence up to max_value
+        fib_sequence = fibonacci_module.generate_fibonacci_sequence(max_value)
+        print(f"Fibonacci series upto {max_value} :")
+        
+        # Join the numbers with a space and ensure there's no trailing space or newline at the end
+        print(" ".join(map(str, fib_sequence)), end=" ")  
+    else:
+        print("Please enter a positive integer")
+
+# Run the program
+if __name__ == "__main__":
+    main()
+
+//file 1
+
+def generate_fibonacci_sequence(count):
+    fib_series = [ ]
+    a, b = 0, 1
+    for _ in range(count):
+        fib_series.append(a )
+        a, b = b , a + b
+    return fib_series
+
+
+
